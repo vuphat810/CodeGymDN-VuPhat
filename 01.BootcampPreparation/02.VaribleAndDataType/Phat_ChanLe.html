@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tìm số chẳn lẻ</title>
+    </head>
+    <body>
+        <h1>Tìm số chẳn lẻ</h1>
+        Nhập số<br>
+        <input type = "number" id = "number" ><br>
+        <br>
+        <input type = "button" onclick= "Tính()" value = "Tính" >
+        <p id="Kết quả"></p>
+    <script>
+        function Tính() {
+    
+        var number;
+        var show;
+        number = document.getElementById("number").value;
+              
+        if (number%2 == 0) {show = "Số chẳn"}
+        else{show = "Số lẻ"};
+        
+        document.getElementById("Kết quả").innerHTML = "Kết quả là " + show;
+        }
+    </script>
+
+
+    </body>
+
+</html>

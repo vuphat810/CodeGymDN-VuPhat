@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>I Love U </title>
+</head>
+
+<body>
+    <h1 style="position:absolute; left : 100px ; top : 100px;">Do You Love Me?</h1>
+    <input type="button" value="Yes" onclick="yesClick()" style="position:absolute; left : 180px; top:160px" />
+    <input type="button" value="No" id="noA" onmousemove="noClick()" style="position:absolute; left : 250px; top:160px" />
+    <script>
+        function yesClick() {
+            alert("I know <3");
+        }
+        function noClick() {
+            var a = Math.round(Math.random() * window.innerWidth);
+            var b = Math.round(Math.random() * window.innerHeight);
+            document.getElementById("noA").style.left = a + 'px';
+            document.getElementById('noA').style.top = b + 'px';
+        }
+    </script>
+</body>
+
+</html>

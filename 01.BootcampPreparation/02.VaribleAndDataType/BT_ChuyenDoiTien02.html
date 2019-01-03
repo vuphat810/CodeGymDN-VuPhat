@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <Title>Chuyển Đổi Tiền 02</Title>
+</head>
+
+<body>
+        <h1>Chuyển đổi tiền từ VND sang USD</h1>
+        Amount<br>
+        <Input type = "number" id = "Amount"><br>
+        <br>From Currency<br>
+        <select type = "Text" id = "From"><option value="VND">VND</option>
+            <option value="USD" >USD</option></select><br>
+        <br>To Currency<br>
+        <select type =  "Text" id = "To"><option value="USD">USD</option>
+            <option value="VND">VND</option></select><br>
+        <br><Input type = "button" onclick="Convert()" value = "Convert">
+        </form>
+        <p id="showResult"></p>
+
+    <script>
+        function Convert() {;
+        var Amount;
+        var From;
+        var To;
+        var Convert;
+        Amount = document.getElementById("Amount").value;
+        From = document.getElementById("From").value;
+        To = document.getElementById("To").value;
+        if (From == "VND" && To == "USD"){ Convert  = Amount / 23000 + "USD" }
+        else{Convert = Amount * 23000 + "VND" }
+        document.getElementById("showResult").innerHTML = "Result is " + Convert;}
+    </script> 
+    </body>
+</html>
