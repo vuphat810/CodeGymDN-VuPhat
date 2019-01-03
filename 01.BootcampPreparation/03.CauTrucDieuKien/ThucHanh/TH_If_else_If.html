@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <script>
-        var account = prompt ("Nhập tên người dùng",'');
+
+<body>
+    <script>
+        var account = prompt("Nhập tên người dùng", '');
         if (account == "Admin") {
-            var pass = prompt ("Nhập mật khẩu",'')
-            if (pass== "TheMaster"){
-                alert ('Welcome')
-            } else if(pass =="null"){
-                alert ('canceled')
+            var pass = prompt("Nhập mật khẩu", '')
+            if (pass == "TheMaster") {
+                alert('Welcome')
+            } else if (pass == "null") {
+                alert('canceled')
             } else {
                 alert('wrong password')
             }
+        } else if (account == "null") {
+            alert('canceled')
+        } else {
+            alert('I dont know you')
         }
-        else if (account == "null") {
-            alert ('canceled')
-        }else {
-            alert ('I dont know you')
-        }
-     
-        
-        </script>
-    </body>
+
+
+    </script>
+</body>
+
 </html>

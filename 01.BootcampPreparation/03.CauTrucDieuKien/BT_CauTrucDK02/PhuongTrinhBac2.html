@@ -2,15 +2,17 @@
 <html>
 
 <head>
-    <title>Giải phương trình bậc 1</title>
+    <title>Giải phương trình bậc 2</title>
 </head>
 
 <body>
-    <h1>Giải phương trình bậc 1</h1>
+    <h1>Giải phương trình bậc 2</h1>
     <form>
         <input type="number" id="a" />
-        x +
+        x² +
         <input type="number" id="b" />
+        x +
+        <input type="number" id="c" />
         = 0
         <br>
         <input type="button" onclick="count()" value="Count" />
@@ -20,9 +22,22 @@
         function count() {
             var a = document.getElementById("a").value;
             var b = document.getElementById("b").value;
-            var x = -b / a;
-            document.getElementById("show").innerHTML = "x =" + x;
+            var c = document.getElementById("c").value;
+            var delta = (b * b) - (4 * a * c);
+            var x1 = (-b + sqrt(delta) / (2 * a));
+            var x2 = (-b - sqrt(delta) / (2 * a));
+            var x3 = -b / (2 * a);
+            if (delta > 0) {
+                document.getElementById("show").innerHTML = "x1 =" + x1;
+                document.write(<br />);
+                document.getElementById("show").innerHTML = "x2 =" + x2;
+            } else if (delta == 0) {
+                document.getElementById("show").innerHTML = "x1 = x2 = " + x3;
+            } else {
+                document.getElementById("show").innerHTML = "Phương trình vô nghiệm"
+            }
         }
+
 
     </script>
 </body>
