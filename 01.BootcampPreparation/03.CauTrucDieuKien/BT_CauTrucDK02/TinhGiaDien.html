@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tính giá điện sinh hoạt</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt("Nhập số chữ điện (kWh)"));
+        var money;
+        if (a < 50) {
+            money = a * 1549;
+        } else if (a < 100) {
+            money = 50 * 1549 + (a - 50) * 1600;
+        } else if (a < 200) {
+            money = 50 * 1549 + 50 * 1600 + (a - 100) * 1858;
+        } else if (a < 300) {
+            money = 50 * 1549 + 50 * 1600 + 100 * 1858 + (a - 200) * 2340;
+        } else if (a < 400) {
+            money = 50 * 1549 + 50 * 1600 + 100 * 1858 + 100 * 2340 + (a - 300) * 2615; 
+        } else {
+            money = 50 * 1549 + 50 * 1600 + 100 * 1858 + 100 * 2340 + 100 * 2615 + (a - 400) * 2271;
+        }
+        alert ("Giá tiền điện là: " + money);
+    </script>
+</body>
+
+</html>
