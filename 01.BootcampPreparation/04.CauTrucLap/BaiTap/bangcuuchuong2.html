@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        sout = "<table border='1' width='300' cellspacing='1' cellpadding ='3' ";
+        var i;
+        var j;
+        for (i = 2; i <= 9 ; i++) {
+            sout = sout + "<tr>";
+            for (j = 1; j <= 9; j++) {
+                sout = sout + "<td>" + i + "x" + j + "=" + i * j + "</td>";
+            }
+            sout = sout + "</tr>";
+        }
+        document.write(sout);
+    </script>
+</body>
+</html>

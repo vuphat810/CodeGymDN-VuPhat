@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bang Cuu Chuong</title>
+</head>
+
+<body>
+    <script>
+        var sout, i, j;
+        sout = "<table border='1' width='600' cellspacing='1' cellpadding='5'> "
+        for (i = 2; i <= 9; i++) {
+            sout = sout + "<tr>";
+            for (j = 1; j <= 9; j++) {
+                sout = sout + "<td>" + i + "x" + j + "=" + i * j + "</td>" ;
+            }
+            sout = sout + "</tr>";
+        }
+        sout = sout + "</table>";
+        document.write(sout);
+
+    </script>
+
+</body>
+
+</html>
