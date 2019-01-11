@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+<script>
+    var num = parseInt(prompt("Nhập dãy số vào Mảng:"));
+    var x = num.toString();
+    var max = x[0];
+    var position = 0;
+    for (var i = 1; i < x.length ; i++) {
+        if (x[i] > max) {
+            max =  x[i];
+            position = i
+        }
+    }
+    alert("Giá trị lớn nhất của Mảng là " + max + " tại phần tử thứ " + position);
+    
+</script>
+
+</html>

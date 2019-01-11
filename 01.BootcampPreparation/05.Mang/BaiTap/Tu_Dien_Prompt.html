@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    var enter = prompt("Enter your vocabulary:");
+    var eng = ["Hello", "Good", "Morning", "Afternoon", "Teacher", "Student"];
+    var viet = ["Chào", "Tốt", "Buổi sáng", "Buổi chiều", "Giáo viên", "Học sinh"];
+    var indexResult = -1;
+    for (var i = 0; i < eng.length ; i++) {
+        if (enter == eng[i]) {
+           indexResult = i;
+           alert(viet[indexResult]);
+        } else {
+            alert("Not Found")
+        }
+    }
+
+    </script>
+</html>

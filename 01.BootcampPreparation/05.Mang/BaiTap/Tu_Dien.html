@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Từ điển Anh - Việt</h2>
+    <input type="text" id="eng" value="English"></input>
+    <input type="button" value="Dịch" onclick="trans()"></input>
+    <input type="text" id="viet">
+    <p id="Vietnamese"></p>
+    <script>
+        var eng = ["Hello", "Good", "Morning", "Afternoon", "Teacher", "Student"];
+        var viet = ["Chào", "Tốt", "Buổi sáng", "Buổi chiều", "Giáo viên", "Học sinh"];
+        var inputEng = document.getElementById("eng").value;
+        var indexViet = -1
+        function trans() {
+            for (var i = 0; i < eng.length; i++) {
+                if (inputEng == eng[i]) {
+                    indexViet = i;
+                } break;
+            }
+            document.getElementById("Vietnamese").innerHTML = viet[indexViet];
+        }
+
+    </script>
+
+</body>
+
+
+
+</html>

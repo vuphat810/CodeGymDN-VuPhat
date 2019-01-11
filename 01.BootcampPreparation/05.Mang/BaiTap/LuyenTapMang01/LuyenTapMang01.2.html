@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var num = [1, 2, 4, 55, 99, 0, 4, 34, 78, 56];
+    var text = "";
+    var max = num[0];
+    var positionMax = 0;
+    for (var i in num) {
+        if (max < num[i]) {
+            max = num[i]
+            positionMax = i;
+            
+        }
+    }
+    alert("Giá trị lớn nhất Mảng là " + max + "tại phần tử thứ " + positionMax);
+</script>
+
+</html>
