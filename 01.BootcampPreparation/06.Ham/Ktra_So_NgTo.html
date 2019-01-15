@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <script>
+        function isPrime(number) {
+            var isPrime = number >= 2;
+
+            if (number > 2) {
+                for (var i = 2; i < number - 1; i++) {
+                    if (number % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            return isPrime;
+        }
+        var number = parseInt(prompt("Enter a number to check Prime:"));
+        var result = isPrime(number)
+        if ( result = true) {
+            alert(number + " là số nguyên tố");
+
+        } else {
+            alert(number + " không phải là số nguyên tố")
+        }
+        
+
+    </script>
+</body>
+
+</html>

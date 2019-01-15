@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    Square of <input type="number" id="input" oninput="calculate()"> is: <span id="result"></span>
+
+    <script>
+        function square(number) {
+            var result = number * number;
+            return result;
+        }
+        function calculate() {
+            var num = document.getElementById("input").value;
+            var result = square(num);
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Chuyển đổi từ feets sang meters</h2>
+    Nhập số feets: <input type="number" id="inputFeet" oninput="change_to_meters()" /> <br>
+    Số meters: <span id="meters"></span> <br>
+    <h2>Chuyển đổi từ meters sang feet</h2>
+    Nhập số meters: <input type="number" id="inputMeter" oninput="change_to_feet()" /> <br>
+    Số feet: <span id="feet"></span>
+</body>
+<script>
+    function feet_to_meters(feet) {
+        var meters = feet * 0.305;
+        return meters;
+    }
+    function change_to_meters() {
+        var feet = document.getElementById("inputFeet").value;
+        var meters = feet_to_meters(feet);
+        document.getElementById("meters").innerHTML = meters;
+    }
+
+    function meters_to_feet(meter) {
+        var feet = meter * 3.279;
+        return feet;
+    }
+    function change_to_feet() {
+        var meter = document.getElementById("inputMeter").value;
+        var feet = meters_to_feet(meter);
+        document.getElementById("feet").innerHTML = feet
+
+    }
+</script>
+
+</html>

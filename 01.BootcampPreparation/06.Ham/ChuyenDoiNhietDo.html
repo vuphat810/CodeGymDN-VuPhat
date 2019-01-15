@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Temperature Converter</h2>
+    Type a value in Fahrenheit fiel to convert the value to Celcius: <br> <br>
+    Fahrenheit <input type="number" id="Fahrenheit" oninput="input()" /> <br> <br>
+    Celcius: <span id="Celcius"></span>
+    <script>
+        /*var c = 0;
+        var f = 0;
+        function input() {
+            var f = document.getElementById("Fahrenheit").value;
+            var c = (f -32) / 1.8 ; 
+            document.getElementById("Celcius").innerHTML =  c;   
+        } */
+        function convert(temp) {
+            
+            var c = (temp -32) / 1.8;
+            return (c);
+        }
+        function input() {
+            var doF = document.getElementById("Fahrenheit").value;
+            var doC = convert(doF);
+            document.getElementById("Celcius").innerHTML = doC;
+        }
+        
+
+
+
+
+    </script>
+</body>
+
+
+</html>
