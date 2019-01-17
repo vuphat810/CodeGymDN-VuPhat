@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var circle = function (radius) {
+
+        this.getRadius = function () {
+            return radius;
+        }
+
+        this.getArea = function () {
+            return Math.PI * radius * radius;
+
+        }
+    }
+
+    var circle_2 = new circle(2);
+    var radius = circle_2.getRadius();
+    var area = circle_2.getArea();
+    alert("radius: " + radius + "; arae: " + area);
+</script>
+
+</html>

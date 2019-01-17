@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function Mobile(baterry, status) {
+        // 1.Có một thông số về trạng thái pin tính bằng đơn vị số nguyên (tối đa 100 đv)
+        this.baterry = baterry;
+
+        // 2.Có một vùng nhớ dùng để lưu tin nhắn đang soạn thảo.
+        this.draftMemorry = [];
+
+        // 3.Có một vùng nhớ dùng để lưu tin nhắn trong hộp thư đến.
+        this.inboxMemorry = [];
+
+        // 4.Có một vùng nhớ dùng để lưu tin nhắn đã gửi.
+        this.sentMemorry = [];
+
+        // 5.Có chức năng kiểm tra trạng thái điện thoại bật hay tắt.
+        this.status = status;
+
+        // 6.Có chức năng bật và tắt điện thoại
+        this.isOn = function () {
+            return this.status;
+        }
+        this.turnOffOn = function () {
+            this.status = !this.status;
+        }
+        // 7.Có chức năng xạc pin điện thoại.
+        this.changeBatterry = function () {
+            if (this.battery < 100) {
+                this.battery++;
+            }
+        }
+        // 8.Có chức năng soạn tin nhắn.
+        this.createMessage = function (message) {
+            this.draftMemorry.push(message);
+        }
+        // 9.Có chức năng nhận tin nhắn từ một chiếc mobile khác.
+        this.receiveMessage = function (message) {
+            this.inboxMemorry.push(message);
+        }
+        // 10.Có chức năng gửi tin nhắn tới một chiếc mobile khác
+        this.sendMessage = function (mobile) {
+            if (this.draftMemorry.length > 0) {
+                var sendMessage = this.draftMemorry.pop();
+                this.sentMemorry.push(sendMessage);
+                mobile.inboxMemorry.push(sendMessage);
+            }
+        }
+        // 11. Có chức năng xem tin trong hộp thư đến.
+        this.showMessage = function () {
+            for (var index in this.inboxMemorry) {
+                alert(this.inboxMemorry[index]);
+            }
+        }
+        // 12. Có chức năng xem tin đã gửi.
+        this.showMessage = function () {
+            for (var index in this.sentMemorry) {
+                alert(this.sentMemory[index]);
+            }
+        }
+        // 13. Sau mỗi lần sử dụng một chức năng, năng lượng pin sẽ giảm đi một đơn vị.
+        this.reduceEnergy = function () {
+            if (this.battery > 0) {
+                this.battery--;
+            }
+        }
+    }
+
+    // 14. var iPhone = new Mobile(99, true);
+    var nokia = new Mobile(80, true);
+    var iPhone = new Mobile(90, true);
+    iPhone.createMessage("hello");
+    iPhone.sendMessage(nokia);
+    nokia.showMessage();
+
+</script>
+
+</html>

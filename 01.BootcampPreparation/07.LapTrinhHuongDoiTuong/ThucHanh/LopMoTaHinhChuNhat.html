@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+    <script>
+        var Rectangle = function (width, height) {
+            this.width = width;
+            this.height = height;
+
+            this.dientich = function () {
+                return this.width * this.height;
+            }
+
+            this.chuvi = function () {
+                return 2 * (this.height + this.width);
+            }
+        }
+        var rectangle1 = new Rectangle(400, 200);
+        var dientich = rectangle1.dientich();
+        var chuvi = rectangle1.chuvi();
+
+        alert("dien tich: " + dientich + "; chu vi: " + chuvi);
+        
+    </script>
+    <canvas id="myCanvas" width= "400" height="200" style="border:1px solid #c3c3c3;">
+
+    </canvas>
+</body>
+
+</html>

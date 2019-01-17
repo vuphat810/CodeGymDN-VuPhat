@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        //Xây dựng phương thức trả về ngày, tháng năm
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+
+        //Xây dựng phương thức thiết đặt lại giá trị các thuộc tính day, month, year
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+    }
+
+    //Sử dụng lớp vừa tạo.
+    var date = new MyDate(2, 2, 2007);
+
+    //Truy cập phương thức của lớp Date.
+    var day = date.getDay(); // 2
+    var month = date.getMonth(); // 2
+    var year = date.getYear(); // 2007
+
+    //Hiển thị ngày tháng
+    alert(day + "/" + month + "/" + year);
+
+    // Set lai gia tri cho ngay thang nam va hien thi
+    date.setDay(15);
+    date.setMonth(1);
+    date.setYear(2019);
+    day = date.getDay(); // 15
+    month = date.getMonth(); // 1
+    year = date.getYear(); // 2019
+    //Hiển thị ngày tháng sau khi set lai.
+    alert(day + "/" + month + "/" + year);
+
+</script>
+
+</html>

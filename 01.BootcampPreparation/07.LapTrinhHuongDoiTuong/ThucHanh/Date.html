@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var myDate = function (day, month, year) {
+
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getday = function () {
+            return this.day;
+        }
+        this.getmonth = function () {
+            return this.month;
+        }
+        this.getyear = function () {
+            return this.year;
+
+        }
+
+        this.setday = function (day) {
+            this.day = day;
+        }
+        this.setmonth = function (month) {
+            this.month = month;
+        }
+        this.setyear = function (year) {
+            this.year = year;
+        }
+    }
+    var date = new myDate(27, 3, 1996);
+    
+    var day = date.getday();
+    var month = date.getmonth();
+    var year = date.getyear();
+    alert(day + "/" + month + "/" + year);
+
+    date.setday(8);
+    date.setmonth(10);
+    date.setyear(1996);
+    day = date.getday();
+    month = date.getmonth();
+    year = date.getyear();
+    alert(day + "/" + month + "/" + year);
+    
+</script>
+
+</html>
