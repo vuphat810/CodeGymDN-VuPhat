@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    function SwitchButton(status = true){
+    this.status = status;
+    this.lamp = null
+    this.connectToLamp = function(ElectricLamp) {
+        this.lamp = ElectricLamp;
+    }
+    this.switchOn = function() {
+        this.lamp.turnOn();
+    }
+
+    this.switchOff = function() {
+        this.lamp.turnOff();
+    }
+}
+
+    function ElectricLamp(status = true) {
+        this.status = status;
+        this.turnOn = function () {
+            console.log("Light!!")
+        }
+
+        this.turnOff = function () {
+            console.log("Not Light!!")
+        }
+    }
+
+    var button1 =new SwitchButton(true);
+    var lamp1 = new ElectricLamp(true);
+    button1.connectToLamp(lamp1);
+    for (i = 0; i < 10; i++) {
+        lamp1.turnOn();
+        lamp1.turnOff();
+    }
+    </script>
+</html>

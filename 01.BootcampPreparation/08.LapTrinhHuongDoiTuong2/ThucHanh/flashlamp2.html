@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function Batery() {
+        this.setEnergy = function (energy) {
+            this.energy = energy;
+        }
+
+        this.getEnergy = function () {
+            return  this.energy;
+        }
+
+        this.decreaseEnergy = function () {
+            if (this.energy > 0) {
+                this.energy -- ;
+            }
+        }
+    }
+
+    function Flashlamp() {
+        this.setBaterry = function (baterry) {
+            this.baterry = baterry;
+        }
+    
+        this.getBaterryInfo = function () {
+            return this.baterry.getEnergy();
+        }
+
+        this.turnOn = function() {
+            this.status = true;
+        }
+        this.turnOff = function() {
+            this.status = false;
+        }
+
+        this.light = function() {
+            if (this.status) {
+                alert("Lighting!");
+            } else {
+                alert("Not Lighting!")
+            }
+        }
+    }
+
+    // Testing
+        var baterry1 =new Batery();
+        baterry1.setEnergy(20);
+
+        var flashlamp1 =new Flashlamp();
+        flashlamp1.setBaterry(baterry1);
+
+        flashlamp1.light();
+
+        flashlamp1.turnOn();
+        flashlamp1.light();
+
+        
+
+
+</script>
+
+</html> 
