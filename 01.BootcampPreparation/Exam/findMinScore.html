@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    function findMinScore (scores) {
+        var minScore = scores[0];
+        for (var i in scores) {
+            if (minScore > scores[i]) {
+                minScore = scores[i];
+            }
+        }
+        return minScore;
+    }
+    var scores = [7,8,9,7,6,8,10,5,7];
+    console.log(findMinScore(scores));
+    </script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function removeValueFromArray(arr, value) {
+        var index = -1
+        for (var i = 0; i < arr.length; i++) {
+            if (value == arr[i]) {
+                index = i;
+                for (var m = index; m < arr.length; m++) {
+                    arr[m] = arr[m + 1];
+                }
+                arr.pop();
+                i--;
+            }
+        }
+        return arr;
+    }
+    var arr = [1, 1, 1, 1, 65, 3, 9, 766, 65, 3, 56, 22];
+    var n = 3;
+    console.log(removeValueFromArray(arr, 1));
+</script>
+
+</html>

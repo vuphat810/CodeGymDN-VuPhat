@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+    function reverse(arr) {
+        var first = 0;
+        var last = arr.length - 1;
+        while (first < last) {
+            var b = arr[first];
+            arr[first] = arr[last];
+            arr[last] = b;
+            first++;
+            last--;
+        }
+        return arr;
+    }
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log(reverse(arr));
+</script>
+
+</html>

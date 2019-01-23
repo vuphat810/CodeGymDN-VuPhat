@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function isPrime(number) {
+        var isPrime = true;
+        if (number > 2) {
+            for (var i = 2; i < number - 1; i++) {
+                if (number % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        } else if (number == 2) {
+            isPrime = true;
+
+        } else {
+            isPrime = false
+        }
+
+        return isPrime;
+    }
+    alert(isPrime(7));
+    alert(isPrime(2));
+    console.log(isPrime(8));
+
+
+</script>
+
+</html>

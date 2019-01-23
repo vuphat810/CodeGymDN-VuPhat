@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script>
+    //Tìm chỉ số của một phần tử trong mảng
+    function findIndex (arr, value) {
+        var index = -1;
+        for (var i in arr) {
+            if (value == arr[i]) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+    var arr = [1,2,3,4,5];
+    console.log(findIndex(arr, 5));
+
+</script>
+
+</html>

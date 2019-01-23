@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function tryRemoveFromArray(arr, index) {
+        if (index >= 0 && index < arr.length) {
+            for (var i = index; i < arr.length; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr.pop();
+        }
+        return arr;
+    }
+
+    var arr = [0, 1, 2, 3, 4, 5];
+    var index = parseInt(prompt("Enter index: "))
+    console.log(tryRemoveFromArray(arr, index));
+</script>
+
+</html>

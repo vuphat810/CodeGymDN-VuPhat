@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    var patt = /^[CAP][0-9]{4}[GHIKML]$/ 
+    function ValidateClass (str) {
+        if (patt.test(str)) {
+            alert (str + " is Validate Class Name") ;
+            } else {
+            alert (str + " is NOT Validate Class Name");
+            }
+        }
+        var a = "C1234G"
+        ValidateClass(a);
+        ValidateClass("A1996M");
+
+    </script>
+</html> 

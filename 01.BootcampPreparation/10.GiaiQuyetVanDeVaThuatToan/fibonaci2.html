@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    //in 20 số fibonacci
+    var n = 0;
+    var first = 1;
+    var second = 0;
+    var text = "";
+    for (var i = 0; i < 20; i++) {
+        n = first + second;
+        second = first;
+        first = n;
+        text += n + "<br>";
+    }
+    document.write(text);
+    </script>
+</html>

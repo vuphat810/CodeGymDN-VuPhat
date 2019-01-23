@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <canvas id="myCanvas" width="300" height="200" style="border:1px solid #801717"></canvas>
+
+  <script>
+      // Viết một chương trình để biểu diễn hình chữ nhật với mô tả như sau:
+      // Rectangle: Tên lớp
+      // x: tọa độ x
+      // y: Tọa độ y
+      // width: Chiều rộng
+      // height: Chiều cao
+      //color: Màu sắc
+      // render(canvas): Hiển thị hình chữ nhật trên một canvas
+      // Kịch bản: Tạo một hình chữ nhật có tọa độ 10,10 và kích thước rộng 200 cao 100, màu tự chọn.
+
+      function Rectangle(x, y, width, height, color) {
+          this.x = x;
+          this.y = y;
+          this.width = width;
+          this.height = height;
+          this.color = color;
+          this.ctx = document.getElementById("myCanvas").getContext("2d");
+
+          this.draw = function () {
+              this.ctx.fillStyle = this.color;
+              this.ctx.fillRect(this.x, this.y, this.width, this.height);
+          }
+      }
+
+      var rec1 = new Rectangle(10, 10, 200, 100, "blue");
+      rec1.draw();
+
+  </script>
+</body>
+
+</html>

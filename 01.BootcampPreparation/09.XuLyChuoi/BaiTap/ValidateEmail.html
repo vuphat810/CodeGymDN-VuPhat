@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    var patt = /^[A-Za-z0-9]+@[A-Za-z0-9]+(.[A-Za-z0-9]+)$/;
+    function ValidateEmail (str) {
+        if (patt.test(str)) {
+            alert(str + " is Validate Email!")
+        } else {
+            alert(str + " is NOT Validate Email!")
+        }
+    }
+    ValidateEmail("vuphat810@gmail.com");
+    ValidateEmail("vuphat@@codegym.vn");
+    ValidateEmail("a@gmail.com.vn")
+    </script>
+</html>

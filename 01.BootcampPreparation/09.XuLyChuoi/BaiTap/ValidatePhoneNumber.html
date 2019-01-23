@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var patt = /^[0-9]{2}(-0[0-9]{9})$/
+    function ValidatePhoneNumber(str) {
+        if (patt.test(str)) {
+            alert(str + " is a Phone Number");
+        } else {
+            alert(str + " is NOT a Phone Number");
+        }
+    }
+    var num1 = "83-0907645365"
+    ValidatePhoneNumber("84-0976437864");
+    ValidatePhoneNumber(num1);
+</script>
+
+</html>
