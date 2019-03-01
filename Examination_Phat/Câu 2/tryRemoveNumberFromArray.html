@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loại bỏ số nguyên đầu tiên được chọn</title>
+</head>
+
+<body>
+    <script>
+        function tryRemoveNumberFromArray(arr, number) {
+            for (var i = 0; i < arr.length; i++) {
+                if (number == arr[i]) {
+                    for (var m = i; m < arr.length; m++) {
+                        arr[m] = arr[m + 1];
+                    }
+                    arr.pop();
+                    break;
+                }
+            }
+            return arr;
+        }
+        var arr1 = [2, 4, 5, 7, 43, 28, 62, 90, 4, 2, 5];
+        console.log(tryRemoveNumberFromArray(arr1, 4));
+
+    </script>
+</body>
+
+</html>

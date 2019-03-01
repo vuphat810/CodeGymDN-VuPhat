@@ -3,22 +3,28 @@
 
 <body>
     <h2>Từ điển Anh - Việt</h2>
-    <input type="text" id="eng" value="English"></input>
+    <input type="text" id="english" value="English"></input>
     <input type="button" value="Dịch" onclick="trans()"></input>
     <input type="text" id="viet">
     <p id="Vietnamese"></p>
     <script>
         var eng = ["Hello", "Good", "Morning", "Afternoon", "Teacher", "Student"];
         var viet = ["Chào", "Tốt", "Buổi sáng", "Buổi chiều", "Giáo viên", "Học sinh"];
-        var inputEng = document.getElementById("eng").value;
-        var indexViet = -1
+        var inputEng = document.getElementById("english").value;
+       
         function trans() {
+            
             for (var i = 0; i < eng.length; i++) {
+                var result = "";
                 if (inputEng == eng[i]) {
-                    indexViet = i;
-                } break;
+                    result = viet[i];
+                    break;
+                } else {
+                    result = "Not Found";
+                    break;
+                } 
             }
-            document.getElementById("Vietnamese").innerHTML = viet[indexViet];
+            document.getElementById("Vietnamese").innerHTML = result;
         }
 
     </script>
